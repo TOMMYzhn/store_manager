@@ -5,24 +5,6 @@ import os
 from datetime import datetime
 import json
 import uuid
-import pandas as pd
-import streamlit as st
-
-xls = pd.ExcelFile("inventory.xlsx")
-st.write("Excel 工作表列表：", xls.sheet_names)
-
-try:
-    df_products = pd.read_excel("inventory.xlsx", sheet_name="products")
-    st.write("products sheet 数据：", df_products.head())
-except Exception as e:
-    st.error(f"读取 products 失败: {e}")
-
-
-
-
-
-
-
 
 
 
@@ -607,4 +589,5 @@ elif mode == "导出 / 备份":
 st.markdown("---")
 
 st.caption("说明：此系统为轻量级示例，实现库存与收银的基本流程。可根据需求定制导出小票打印、条码批量导入、会员折扣、报表统计（滞销/畅销）等功能。")
+
 
