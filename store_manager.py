@@ -5,6 +5,25 @@ import os
 from datetime import datetime
 import json
 import uuid
+import os
+import streamlit as st
+
+st.write("当前目录文件列表：", os.listdir(os.getcwd()))
+st.write("inventory.xlsx 文件存在吗：", os.path.exists("inventory.xlsx"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 可选的模糊匹配与摄像头扫码依赖
 try:
@@ -572,4 +591,5 @@ elif mode == "导出 / 备份":
 # end
 # -------------------------
 st.markdown("---")
+
 st.caption("说明：此系统为轻量级示例，实现库存与收银的基本流程。可根据需求定制导出小票打印、条码批量导入、会员折扣、报表统计（滞销/畅销）等功能。")
